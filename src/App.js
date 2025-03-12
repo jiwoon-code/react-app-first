@@ -3,21 +3,27 @@ import styled from "styled-components";
 const Father = styled.div`
   display: flex;
 `;
-const Box = styled.div`
-  background-color: ${(props) => props.bgColor};
-  width: 100px;
-  height: 100px;
+const Btn = styled.button`
+  color: white;
+  background-color: tomato;
+  border-radius: 15px;
+  border: 0;
 `;
-
-const Circle = styled(Box)`
-  border-radius: 50px;
+const Input = styled.input.attrs({ required: true, minLength: 10 })`
+  background-color: tomato;
 `;
 
 function App() {
   return (
     <Father>
-      <Box bgColor="teal" />
-      <Circle bgColor="violet" />
+      <Btn>Login</Btn>
+      <Btn as="a" href="/">
+        Login
+      </Btn>
+      <Input />
+      <Input />
+      <Input />
+      <Input />
     </Father>
   );
 }
